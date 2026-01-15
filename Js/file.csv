@@ -1,0 +1,111 @@
+| **Section**       | **Item**                        | **Link**                                                                                                                                                                                                 |
+| ----------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Get Started       | TS for the New Programmer       | [https://www.typescriptlang.org/vo/docs/handbook/typescript-from-scratch](https://www.typescriptlang.org/vo/docs/handbook/typescript-from-scratch)                                                       |
+| Get Started       | TypeScript for JS Programmers   | [https://www.typescriptlang.org/docs/handbook/typescript-for-js](https://www.typescriptlang.org/docs/handbook/typescript-for-js)                                                                         |
+| Get Started       | TS for Java/C# Programmers      | [https://www.typescriptlang.org/docs/handbook/typescript-for-java-csharp](https://www.typescriptlang.org/docs/handbook/typescript-for-java-csharp)                                                       |
+| Get Started       | TS for Functional Programmers   | [https://www.typescriptlang.org/docs/handbook/typescript-for-functional](https://www.typescriptlang.org/docs/handbook/typescript-for-functional)                                                         |
+| Get Started       | TypeScript Tooling in 5 minutes | [https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes)           
+
+
+
+
+
+***************************************************************************************************************************************************************************
+
+
+
+
+                                                  |
+| Handbook          | The TypeScript Handbook         | [https://www.typescriptlang.org/docs/handbook/intro](https://www.typescriptlang.org/docs/handbook/intro)                                                                                                 |
+| Handbook          | The Basics                      | [https://www.typescriptlang.org/docs/handbook/2/basic-types](https://www.typescriptlang.org/docs/handbook/2/basic-types)                                                                                 |
+| Handbook          | Everyday Types                  | [https://www.typescriptlang.org/docs/handbook/2/everyday-types](https://www.typescriptlang.org/docs/handbook/2/everyday-types)                                                                           |
+| Handbook          | Narrowing                       | [https://www.typescriptlang.org/docs/handbook/2/narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing)                                                                                     |
+| Handbook          | More on Functions               | [https://www.typescriptlang.org/docs/handbook/2/functions](https://www.typescriptlang.org/docs/handbook/2/functions)                                                                                     |
+| Handbook          | Object Types                    | [https://www.typescriptlang.org/docs/handbook/2/object-types](https://www.typescriptlang.org/docs/handbook/2/object-types)                                                                               |
+| Handbook          | Creating Types from Types       | [https://www.typescriptlang.org/docs/handbook/2/advanced-types](https://www.typescriptlang.org/docs/handbook/2/advanced-types)                                                                           |
+| Handbook          | Generics                        | [https://www.typescriptlang.org/docs/handbook/2/generics](https://www.typescriptlang.org/docs/handbook/2/generics)                                                                                       |
+| Handbook          | Keyof Type Operator             | [https://www.typescriptlang.org/docs/handbook/2/keyof-types](https://www.typescriptlang.org/docs/handbook/2/keyof-types)                                                                                 |
+| Handbook          | Typeof Type Operator            | [https://www.typescriptlang.org/docs/handbook/2/typeof-types](https://www.typescriptlang.org/docs/handbook/2/typeof-types)                                                                               |
+| Handbook          | Indexed Access Types            | [https://www.typescriptlang.org/docs/handbook/2/indexed-access-types](https://www.typescriptlang.org/docs/handbook/2/indexed-access-types)                                                               |
+| Handbook          | Conditional Types               | [https://www.typescriptlang.org/docs/handbook/2/conditional-types](https://www.typescriptlang.org/docs/handbook/2/conditional-types)                                                                     |
+| Handbook          | Mapped Types                    | [https://www.typescriptlang.org/docs/handbook/2/mapped-types](https://www.typescriptlang.org/docs/handbook/2/mapped-types)                                                                               |
+| Handbook          | Template Literal Types          | [https://www.typescriptlang.org/docs/handbook/2/template-literal-types](https://www.typescriptlang.org/docs/handbook/2/template-literal-types)                                                           |
+| Handbook          | Classes                         | [https://www.typescriptlang.org/docs/handbook/2/classes](https://www.typescriptlang.org/docs/handbook/2/classes)                                                                                         |
+| Handbook          | Modules                         | [https://www.typescriptlang.org/docs/handbook/2/modules](https://www.typescriptlang.org/docs/handbook/2/modules)
+
+
+
+
+
+
+
+***************************************************************************************************************************************************************************
+
+
+
+
+                                                                                         |
+| Reference         | Utility Types                   | [https://www.typescriptlang.org/docs/handbook/utility-types](https://www.typescriptlang.org/docs/handbook/utility-types)                                                                                 |
+| Reference         | Cheat Sheets                    | [https://www.typescriptlang.org/docs/handbook/cheat-sheets](https://www.typescriptlang.org/docs/handbook/cheat-sheets)                                                                                   |
+| Reference         | Decorators                      | [https://www.typescriptlang.org/docs/handbook/decorators](https://www.typescriptlang.org/docs/handbook/decorators)                                                                                       |
+| Reference         | Declaration Merging             | [https://www.typescriptlang.org/docs/handbook/declaration-merging](https://www.typescriptlang.org/docs/handbook/declaration-merging)                                                                     |
+| Reference         | Enums                           | [https://www.typescriptlang.org/docs/handbook/enums](https://www.typescriptlang.org/docs/handbook/enums)                                                                                                 |
+| Reference         | Iterators & Generators          | [https://www.typescriptlang.org/docs/handbook/iterators-and-generators](https://www.typescriptlang.org/docs/handbook/iterators-and-generators)                                                           |
+| Reference         | JSX                             | [https://www.typescriptlang.org/docs/handbook/jsx](https://www.typescriptlang.org/docs/handbook/jsx)                                                                                                     |
+| Reference         | Mixins                          | [https://www.typescriptlang.org/docs/handbook/mixins](https://www.typescriptlang.org/docs/handbook/mixins)                                                                                               |
+| Reference         | Namespaces                      | [https://www.typescriptlang.org/docs/handbook/namespaces](https://www.typescriptlang.org/docs/handbook/namespaces)                                                                                       |
+| Reference         | Namespaces & Modules            | [https://www.typescriptlang.org/docs/handbook/namespaces-and-modules](https://www.typescriptlang.org/docs/handbook/namespaces-and-modules)                                                               |
+| Reference         | Symbols                         | [https://www.typescriptlang.org/docs/handbook/symbols](https://www.typescriptlang.org/docs/handbook/symbols)                                                                                             |
+| Reference         | Triple-Slash Directives         | [https://www.typescriptlang.org/docs/handbook/triple-slash-directives](https://www.typescriptlang.org/docs/handbook/triple-slash-directives)                                                             |
+| Reference         | Type Compatibility              | [https://www.typescriptlang.org/docs/handbook/type-compatibility](https://www.typescriptlang.org/docs/handbook/type-compatibility)                                                                       |
+| Reference         | Type Inference                  | [https://www.typescriptlang.org/docs/handbook/type-inference](https://www.typescriptlang.org/docs/handbook/type-inference)                                                                               |
+| Reference         | Variable Declarations           | [https://www.typescriptlang.org/docs/handbook/variable-declarations](https://www.typescriptlang.org/docs/handbook/variable-declarations)
+
+
+
+
+
+***************************************************************************************************************************************************************************
+
+                                                                 |
+| Modules Ref       | Introduction                    | [https://www.typescriptlang.org/docs/handbook/module-resolution](https://www.typescriptlang.org/docs/handbook/module-resolution)                                                                         |
+| Modules Ref       | Theory                          | [https://www.typescriptlang.org/docs/handbook/module-resolution](https://www.typescriptlang.org/docs/handbook/module-resolution)                                                                         |
+| Modules Ref       | Choosing Compiler Options       | [https://www.typescriptlang.org/docs/handbook/compiler-options](https://www.typescriptlang.org/docs/handbook/compiler-options)                                                                           |
+| Modules Ref       | Reference                       | [https://www.typescriptlang.org/docs/handbook/typescript-module-resolution](https://www.typescriptlang.org/docs/handbook/typescript-module-resolution)                                                   |
+
+
+
+
+***************************************************************************************************************************************************************************
+
+
+| Declaration Files | Introduction                    | [https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html)                                     |
+| Declaration Files | Declaration Reference           | [https://www.typescriptlang.org/docs/handbook/declaration-files/declaration-reference.html](https://www.typescriptlang.org/docs/handbook/declaration-files/declaration-reference.html)                   |
+| Declaration Files | Library Structures              | [https://www.typescriptlang.org/docs/handbook/declaration-files/library-structures.html](https://www.typescriptlang.org/docs/handbook/declaration-files/library-structures.html)                         |
+| Declaration Files | .d.ts Templates: Modules        | [https://www.typescriptlang.org/docs/handbook/declaration-files/templates/modules.d.ts.html](https://www.typescriptlang.org/docs/handbook/declaration-files/templates/modules.d.ts.html)                 |
+| Declaration Files | .d.ts Templates: Plugin         | [https://www.typescriptlang.org/docs/handbook/declaration-files/templates/module-plugin.d.ts.html](https://www.typescriptlang.org/docs/handbook/declaration-files/templates/module-plugin.d.ts.html)     |
+| Declaration Files | .d.ts Templates: Class          | [https://www.typescriptlang.org/docs/handbook/declaration-files/templates/module-class.d.ts.html](https://www.typescriptlang.org/docs/handbook/declaration-files/templates/module-class.d.ts.html)       |
+| Declaration Files | .d.ts Templates: Function       | [https://www.typescriptlang.org/docs/handbook/declaration-files/templates/module-function.d.ts.html](https://www.typescriptlang.org/docs/handbook/declaration-files/templates/module-function.d.ts.html) |
+| Declaration Files | .d.ts Templates: Global         | [https://www.typescriptlang.org/docs/handbook/declaration-files/templates/global.d.ts.html](https://www.typescriptlang.org/docs/handbook/declaration-files/templates/global.d.ts.html)                   |
+| Declaration Files | Do’s & Don’ts                   | [https://www.typescriptlang.org/docs/handbook/declaration-files/do-and-donts.html](https://www.typescriptlang.org/docs/handbook/declaration-files/do-and-donts.html)                                     |
+| Declaration Files | Deep Dive                       | [https://www.typescriptlang.org/docs/handbook/declaration-files/deep-dive.html](https://www.typescriptlang.org/docs/handbook/declaration-files/deep-dive.html)                                           |
+| Declaration Files | Publishing                      | [https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html)                                         |
+| Declaration Files | Consumption                     | [https://www.typescriptlang.org/docs/handbook/declaration-files/consumption.html](https://www.typescriptlang.org/docs/handbook/declaration-files/consumption.html)                                       |
+
+
+
+***************************************************************************************************************************************************************************
+
+| JavaScript        | JS Projects Utilizing TS        | [https://www.typescriptlang.org/docs/handbook/js-projects-using-typescript](https://www.typescriptlang.org/docs/handbook/js-projects-using-typescript)                                                   |
+| JavaScript        | Type Checking JS Files          | [https://www.typescriptlang.org/docs/handbook/checking-js-files](https://www.typescriptlang.org/docs/handbook/checking-js-files)                                                                         |
+| JavaScript        | JSDoc Reference                 | [https://www.typescriptlang.org/docs/handbook/jsdoc-supported-tags](https://www.typescriptlang.org/docs/handbook/jsdoc-supported-tags)                                                                   |
+
+
+
+| Project Config    | What is tsconfig.json           | [https://www.typescriptlang.org/docs/handbook/tsconfig-json](https://www.typescriptlang.org/docs/handbook/tsconfig-json)                                                                                 |
+| Project Config    | Compiler Options in MSBuild     | [https://www.typescriptlang.org/docs/handbook/compiler-options-md](https://www.typescriptlang.org/docs/handbook/compiler-options-md)                                                                     |
+| Project Config    | TSConfig Reference              | [https://www.typescriptlang.org/docs/handbook/tsconfig-reference](https://www.typescriptlang.org/docs/handbook/tsconfig-reference)                                                                       |
+| Project Config    | tsc CLI Options                 | [https://www.typescriptlang.org/docs/handbook/compiler-options](https://www.typescriptlang.org/docs/handbook/compiler-options)                                                                           |
+| Project Config    | Project References              | [https://www.typescriptlang.org/docs/handbook/project-references](https://www.typescriptlang.org/docs/handbook/project-references)                                                                       |
+| Project Config    | Integrating Build Tools         | [https://www.typescriptlang.org/docs/handbook/integrating-with-build-tools](https://www.typescriptlang.org/docs/handbook/integrating-with-build-tools)                                                   |
+

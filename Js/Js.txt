@@ -112,5 +112,57 @@ String Methods->
 -Map
 Map is a collection of keyed data items, just like an Object. But the main difference is that Map allows keys of any type.
 
+In the examples above variables were declared right in the assignment: let {…} = {…}. Of course, we could use existing variables too, without let. But there’s a catch.
+
+This won’t work:
+
+let title, width, height;
+
+// error in this line
+{title, width, height} = {title: "Menu", width: 200, height: 100};
+The problem is that JavaScript treats {...} in the main code flow (not inside another expression) as a code block. Such code blocks can be used to group statements, like this:
+
+{
+  // a code block
+  let message = "Hello";
+  // ...
+  alert( message );
+}
+So here JavaScript assumes that we have a code block, that’s why there’s an error. We want destructuring instead.
+
+To show JavaScript that it’s not a code block, we can wrap the expression in parentheses (...):
+
+let title, width, height;
+
+// okay now
+({title, width, height} = {title: "Menu", width: 200, height: 100});
+
+alert( title ); // Menu
+
+
+getTimezoneOffset()
+Returns the difference between UTC and the local time zone, in minutes:
+
+- > Transparent caching
+Let’s say we have a function slow(x) which is CPU-heavy, but its results are stable. In other words, for the same x it always returns the same result.
+
+If the function is called often, we may want to cache (remember) the results to avoid spending extra-time on recalculations.
+
+But instead of adding that functionality into slow() we’ll create a wrapper function, that adds caching. As we’ll see, there are many benefits of doing so.
+
 
 }
+
+{
+
+That label affects its behavior with new.
+
+When a regular function is executed with new, it creates an empty object and assigns it to this.
+But when a derived constructor runs, it doesn’t do this. It expects the parent constructor to do this job.
+So a derived constructor must call super in order to execute its parent (base) constructor, otherwise the object for this won’t be created. And we’ll get an error.
+
+For the Rabbit constructor to work, it needs to call super() before using this, like here:
+}
+\
+That’s their implementation of toString. But there’s a hidden feature that makes toString actually much more powerful than that. We can use it as an extended typeof and an alternative for instanceof.
+\
