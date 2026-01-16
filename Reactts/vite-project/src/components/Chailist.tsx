@@ -5,7 +5,6 @@ import { ChaiCard } from "./ChaiCard"
 interface ChaiListProps {
     items: Chai[]
 
-
 }
 
 export function Chailist({ items }: ChaiListProps) {
