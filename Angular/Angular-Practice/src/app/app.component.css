@@ -1,0 +1,156 @@
+/* .tasklist{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 400px;
+    width: 400px;
+    overflow-y:scroll;
+    background-color: bisque;
+    border: 2px solid black;
+}
+ul{
+    list-style:circle;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+li{
+    font: bold;
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    border: 1px solid black;
+
+}
+
+span{
+    text-decoration: line-through;
+} */
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* Title */
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Input + button row */
+input {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  width: 260px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+input:focus {
+  border-color: #007bff;
+}
+
+/* Add Button */
+button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #007bff;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* Todo container */
+.tasklist {
+  margin-top: 25px;
+  width: 400px;
+  height: 400px;
+  overflow-y: auto;
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Remove bullets */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Each task card */
+li {
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 12px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  border: 1px solid #e1e4e8;
+  transition: 0.2s ease;
+}
+
+li:hover {
+  background: #eef4ff;
+}
+
+/* Completed task */
+span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Action buttons */
+li button {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+li button:first-of-type {
+  background: #28a745; /* Done */
+}
+
+li button:last-of-type {
+  background: #dc3545; /* Delete */
+}
+
+li button:first-of-type:hover {
+  background: #1e7e34;
+}
+
+li button:last-of-type:hover {
+  background: #b02a37;
+}

@@ -1,0 +1,128 @@
+<!-- <h3>{{name}}</h3>
+<app-login/>
+<app-profile/> -->
+
+<!-- <button (click)="sum(10,20)">CLick Me</button> -->
+
+<!-- 
+<app-counter/> -->
+
+<!-- <button (click)="handleEvent($event)">Click ME</button>
+<br>
+<div (mouseenter)="handleEvent($event)" style="height: 200px; width: 200px; background-color: red;"></div>
+
+<br>
+<br> -->
+<!-- <h1>{{displayName}}</h1>
+<input type="text" value="{{name}}" name="" id="" placeholder="Do input" 
+(input)="getName(email.value)" #email>
+<br>
+<br>
+<button (click)="setValue()">Get Value</button>
+<button (click)="setName($event)">Set Value</button> -->
+<!-- @if(display){
+
+<div style="width: 200px; height: 200px; background-color: aqua"></div>
+} @else{
+<div style="width: 200px; height: 200px; background-color: yellowgreen"></div>
+}
+<button (click)="onClick()">
+    {{display?'Red':'Yellow'}}
+</button> -->
+<!-- <button (click)="handler(1)">Red</button>
+<button (click)="handler(2)">Blue</button>
+<button (click)="handler(3)">Yellow</button>
+<button (click)="handler(4)">Balck</button> -->
+<!-- <input type="text" (input)="onChange($event)" name="" id="" /> -->
+<!-- @if(color===1){
+
+<div style="background-color: red; width: 100px; height: 100px"></div>
+} @else if(color===2){
+
+<div style="background-color: blue; width: 100px; height: 100px"></div>
+} @else if(color===3){
+
+<div style="background-color: yellow; width: 100px; height: 100px"></div>
+} @else{
+
+<div style="background-color: black; width: 100px; height: 100px"></div>
+} -->
+<!-- <div style="background-color: {{ color }}; width: 100px; height: 100px"></div> -->
+
+<!-- @for(aet of articles;track articles){
+    <h2>aet</h2>
+
+} -->
+<!-- <h1>{{x}}</h1>
+<button (click)="updateX('inc')">Increment</button>
+<h1>{{count()}}</h1> -->
+<!-- <h1>{{data()}}</h1>
+<button (click)="updateSignal('dec')">Decrement</button>
+<h1>{{count}}</h1> -->
+<!-- <h1>{{count()}}</h1> 
+@if(display)
+{<h1>Hello</h1>}
+<button (click)="toggleVal()">Show</button> -->
+<!-- 
+@for(a of arr;track arr){ -->
+
+<!-- @if($first || $last){
+
+        <h3 style="background-color: red;">Index of value{{a}} is {{$index}}</h3>
+    }@else{
+
+        <h3>Index of value{{a}} is {{$index}}</h3>
+    } -->
+<!-- @if($even){ -->
+
+<!-- <h3 style="background-color: red">Index of value{{ a }} is {{ $index }}</h3>
+}@else{
+
+<h3 style="background-color: yellow">Index of value{{ a }} is {{ $index }}</h3>
+} } -->
+<!-- 
+
+@for(a of temp;track temp){
+
+}@empty{
+    <h1>No records</h1>
+} -->
+
+<!-- <input type="text" [(ngModel)]="data "  placeholder="Enter" name="" id="">
+    <h1>{{data}}</h1> -->
+
+<!-- <div class="wrapper">
+  <h1>Todo List</h1>
+
+  <span
+    ><input type="text" placeholder="Enter the Task" [(ngModel)]="task" />
+    <button (click)="addTask()">Add Task</button></span
+  >
+
+  <div class="tasklist">
+    <ul>
+      @for(task of taskList;track taskList){
+      <li> 
+        @if(task.completed){
+        <span>{{ task.title }}</span>
+        }@else{
+        {{ task.title }}
+        } @if(!task.completed){
+        <button (click)="markDone(task.id)">Done</button>
+        }
+        <button (click)="deleteTask(task.id)">Delet</button>
+      </li>
+
+      }@empty{
+      <li>No Items</li>
+      }
+    </ul>
+  </div>
+</div> -->
+
+<!-- <h1 *ngIf="show">Hello</h1> -->
+
+<ul>
+    <li *ngFor="let item of arr">{{item}}</li>
+</ul>
+
