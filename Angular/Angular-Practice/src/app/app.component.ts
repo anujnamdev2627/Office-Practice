@@ -7,11 +7,13 @@ import {
 } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
-import { Profile } from './profile/profile.component';
+
 import { CounterComponent } from './counter/counter.component';
 import { NgFor, NgIf } from '@angular/common';
+import { ProfileComponent } from './profile/profile.component';
+import { HeaderComponent } from './header/header.component';
 interface user {
   name: string;
   title: string;
@@ -25,12 +27,15 @@ interface taskFormate {
   selector: 'app-root',
   standalone: true,
   imports: [
+    RouterLink,
+    HeaderComponent,
     RouterOutlet,
     FormsModule,
     LoginComponent,
-    Profile,
+    ProfileComponent,
     CounterComponent,
-    NgIf,NgFor
+    NgIf,
+    NgFor,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -38,7 +43,6 @@ interface taskFormate {
 export class AppComponent {
   // title = 'Anuj Namdev';
   // name = 'Hello';
-
   // data: user = {
   //   name: this.name,
   //   title: this.title,
@@ -46,7 +50,6 @@ export class AppComponent {
   // hellobutton = () => {
   //   alert(this.data.name);
   // };
-
   // sum = (a: number, b: number) => {
   //   console.log(a + b);
   // };
@@ -57,35 +60,27 @@ export class AppComponent {
   //   const name = (event.target as HTMLInputElement).value;
   //   this.name = name;
   //   console.log(this.name);
-
   // };
   // setName = (event: Event) => {
   //   this.name="Aaag"
   // };
-
   // setValue = (event: Event) => {item
   //   this.displayName=this.name;
   // };
-
   // display: boolean = false;
   // color:string="Yellow"
   // onClick = ( ) => {
   //   this.display = !this.display;
   // };
-
   // color: string = 'red';
-
   // //  handler=(val:string)=>{
   // //   this.color=val;item
   // //  }
   // onChange = (event: Event) => {
   //   console.log((event?.target as HTMLInputElement).value);
-
   //   this.color = (event?.target as HTMLInputElement).value;
   // };
-
   // articles:string[]=['Hello','World','Angular','Raect' ]
-
   // count = signal(10);
   // x = 30;
   // constructor() {
@@ -121,7 +116,7 @@ export class AppComponent {
   // constructor() {
   //   effect(() => {
   //     if (this.count() % 2 === 0) {
-  //       this.display = true;
+  //       this.display = true;ut'
   //       setTimeout(()=>{
   //           this.display=false;
   //       },1000*2)
@@ -138,9 +133,7 @@ export class AppComponent {
   // };
   // temp:string[]=[];
   // arr: string[] = ['Hello', 'World', 'Angular', 'React','Js','Ts','Redux','Signal'];
-
   // data:string=""
-
   // task: string = '';
   // taskList: taskFormate[] = [{ id: 1, title: 'General', completed: false }];
   // setid = (): number => {
@@ -156,13 +149,10 @@ export class AppComponent {
   // };
   // deleteTask = (idx: number) => {
   //   this.taskList = this.taskList.filter((task) => task.id !== idx);
-
   // };
   // markDone = (idx: number) => {
   //   this.taskList[idx-1].completed=true;
   // };
   // show=true;
-
-  arr: string[] = ['Hello', 'World', 'Angular', 'React','Js','Ts','Redux','Signal'];
-
+  // arr: string[] = ['Hello', 'World', 'Angular', 'React','Js','Ts','Redux','Signal'];
 }

@@ -1,0 +1,14 @@
+<!-- <h1><p>home works!</p></h1>
+<a [routerLink]="['/profile', {name:'Hello'}]"  >Goto Profile</a>
+<!-- <button (click)="goTo()">Goto Profile</button> -->
+-->
+<h1>User list</h1>
+
+<ul>
+@for (user of users; track user.id) {
+    <li>
+      <a routerLink="/user/{{user.id}}/{{user.name}}" >{{ user.name }}</a>
+    </li>
+}
+</ul>
+ 

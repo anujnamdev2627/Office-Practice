@@ -1,10 +1,24 @@
-import { Component } from "@angular/core";
-
+import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-    selector:'app-profile',
-    standalone:true,
-    templateUrl: './profile.component.html',
+  selector: 'app-profile',
+  standalone: true,
+  imports: [],
+  templateUrl: './profile.component.html',
+  styleUrl: './profile.component.css',
 })
+export class ProfileComponent {
+  userName: string | null = '';
+  constructor(private route: ActivatedRoute) {}
 
-export class Profile{}
+  ngOnInit() {
+    // this.userName = this.route.snapshot.paramMap.get('name');
+    // console.log(this.userName);
+    this.route.queryParams.subscribe((params) => {
+      console.log(params); // { name: 'Anuj' }
+      this.userName = params['name'];
+    });
+  }
+}
+   
