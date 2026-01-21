@@ -1,35 +1,4 @@
-/* .tasklist{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    height: 400px;
-    width: 400px;
-    overflow-y:scroll;
-    background-color: bisque;
-    border: 2px solid black;
-}
-ul{
-    list-style:circle;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
 
-li{
-    font: bold;
-    width: 100%;
-    text-decoration: none;
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-    border: 1px solid black;
-
-}
-
-span{
-    text-decoration: line-through;
-} */
 
 body {
   font-family: "Segoe UI", sans-serif;
@@ -153,4 +122,17 @@ li button:first-of-type:hover {
 
 li button:last-of-type:hover {
   background: #b02a37;
+}
+
+.error{
+  color: red;
+}
+
+.grid-wrapper{
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-columns: repeat(3,500px);
+  align-items: center;
+  justify-content: center;
 }

@@ -4,16 +4,29 @@ import {
   effect,
   signal,
   WritableSignal,
+  ViewChild,
+  afterRender,
 } from '@angular/core';
 
-import { FormsModule } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  FormsModule,
+  NgForm,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 
 import { CounterComponent } from './counter/counter.component';
-import { NgFor, NgIf } from '@angular/common';
+import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { ProfileComponent } from './profile/profile.component';
 import { HeaderComponent } from './header/header.component';
+import { FormComponent } from './form/form.component';
+import { UserComponent } from './user/user.component';
+import { CurrencyConvertPipe } from './pipe/currency-convert.pipe';
+import { ProductService } from './services/product.service';
 interface user {
   name: string;
   title: string;
@@ -28,14 +41,20 @@ interface taskFormate {
   standalone: true,
   imports: [
     RouterLink,
+    FormComponent,
     HeaderComponent,
+    ReactiveFormsModule,
     RouterOutlet,
-    FormsModule,
     LoginComponent,
+    UserComponent,
     ProfileComponent,
     CounterComponent,
+    ReactiveFormsModule,
     NgIf,
     NgFor,
+    FormsModule,
+    CommonModule,
+    CurrencyConvertPipe,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -155,4 +174,101 @@ export class AppComponent {
   // };
   // show=true;
   // arr: string[] = ['Hello', 'World', 'Angular', 'React','Js','Ts','Redux','Signal'];
+
+  //^Reactive Form
+
+  // name = new FormControl();
+  // password = new FormControl();
+  // display() {,RouterLink,RouterModule
+  //   console.log(this.name.value, this.password.value);
+  // }
+  // setVal(){
+  //   this.name.setValue('Hello')
+  //   this.password.setValue('Pass')
+  // }
+  //!FormGroup
+
+  // formData = new FormGroup({
+  //   name: new FormControl('', [Validators.required]),
+  //   email: new FormControl('', [Validators.required, Validators.maxLength(20)]),
+  //   password: new FormControl('', [
+  //     Validators.required,
+  //     Validators.minLength(5),
+  //     Validators.maxLength(20),
+  //   ]),
+  // });
+  // onSubmit() {
+  //   console.log(this.formData.value);
+  // }
+  // // setValue(){
+  // //   this.formData.setValue({
+  // //     name:"Peter",
+  // //     password:"321",
+  // //     email:"peter@test"
+  // //   })
+  // // }
+  // get name() {
+  //   return this.formData.get('name');
+  // }
+  // get email() {
+  //   return this.formData.get('email');
+  // }
+  // get password() {
+  //   return this.formData.get('password');
+  // }
+
+  //!  Template Driven Froms
+
+  // userDeatils = {};
+  // addDetailes(val: NgForm) {
+  //   console.log(val);
+  //   this.userDeatils = val;
+  // }
+
+  // userName="a"
+
+  // onUserCh(user:string){
+  //   this.userName=user;
+  // }
+  // users = [
+  //   { id: 1, name: 'Anuj', isActive: true },
+  //   { id: 2, name: 'Rohit', isActive: false },
+  //   { id: 3, name: 'Priya', isActive: true },
+  //   { id: 4, name: 'Aman', isActive: true },
+  //   { id: 5, name: 'Neha', isActive: false },
+  //   { id: 6, name: 'Karan', isActive: true },
+  //   { id: 7, name: 'Sumit', isActive: true },
+  //   { id: 8, name: 'Rahul', isActive: false },
+  //   { id: 9, name: 'Vikram', isActive: true },
+  // ];
+  // arr: undefined | string[];
+  // //!Input From the child
+  // handleArr(arr: string[]) {
+  //   this.arr = arr;
+  // }
+  // title="Hello Pipes"
+  // date =new Date()
+
+  // amount=100;
+  // @ViewChild('user') UserComponent:any;
+  //   count=0;
+
+  //   constructor(){
+  //     afterRender(()=>{
+  //       console.log("After Render",this.UserComponent.input);
+
+  //     })
+  //   }
+  //   updateCount(){
+  //     this.count++;
+  //   }
+   productList:any;
+  constructor(private productService: ProductService) {}
+  ngOnInit(){
+    this.productService.getProductList().subscribe((data:any)=>{
+      this.productList=data.products;
+      console.log(this.productList);
+      console.log(Object.keys(this.productList[0]));
+    })
+  }
 }

@@ -130,8 +130,140 @@
     <li>{{it}}</li>
   }
 </ul> -->
-
+<!-- 
 <app-header/>
 <h1>Hello</h1>
 
-<router-outlet/>
+<router-outlet/> -->
+
+<!-- !Forms !-->
+
+<!--! Reactive Forms-->
+<!-- <form [formGroup]="formData" (ngSubmit)="onSubmit()">
+  <input type="text" placeholder="Enter Name" formControlName="name" />
+  <br /><br />
+  <input type="password" placeholder="Password" formControlName="password" />
+  <br /><br />
+  <input type="email" placeholder="Email" formControlName="email" />
+  <br /><br /> -->
+
+<!-- <button type="button" (click)="display()">Login</b utton>
+  <button type="button" (click)="setVal()">Set values in fields</button> -->
+
+<!-- <button>Submit</button>
+  <button type="button" (click)="setValue()">SetValues</button> -->
+
+<!-- !Validators -->
+<!-- <form [formGroup]="formData" (ngSubmit)="onSubmit()">
+  <input type="text" placeholder="Enter Name" formControlName="name" />
+  <span *ngIf="name?.hasError('required')">Name is required</span>
+  <span *ngIf="name?.invalid && (name?.dirty || name?.touched)"
+    >Please Enter User Name</span
+  >
+  <br /><br />
+  <input type="password" placeholder="Password" formControlName="password" />
+  <br /><br />
+  <input type="email" placeholder="Email" formControlName="email" />
+  <br /><br />
+  <button>Submit</button>
+</form> -->
+
+<!--! Template Dirven Forms -->
+<!-- <form #userForm="ngForm" (ngSubmit)="addDetailes(userForm.value)">
+  <input #name="ngModel" type="text" placeholder="Enter Name" name="name" id="" required  ngModel />
+  <span class="error" *ngIf="name.invalid && name.touched">Name is required</span>
+  <br /><br />
+  <input
+  type="password"
+  placeholder="Enter passwrod"
+  name="password"
+  id=""
+  #password="ngModel"
+  ngModel
+  required
+  minlength="5"
+  maxlength="10"
+  />
+  <span class="error" *ngIf="password.invalid && password.touched">password  is required</span>
+   <input
+  type="email"
+  placeholder="Enter passwrod"
+  name="email"
+  id=""
+  #email="ngModel"
+  ngModel
+  required
+  minlength="5"
+  maxlength="10"
+  email
+  />
+  <span class="error" *ngIf="email.invalid && email.touched">email is required</span>
+  <br /><br />
+  <select name="gender" id="" ngModel>
+    <option value="">Enet GEnder</option>
+    <option value="m">Male</option>
+    <option value="f">FeMale</option>
+  </select>
+
+  <br /><br />
+  <input type="range" min="0" max="20" name="range" id="" ngModel />
+  <button [disabled]="userForm.invalid ">Add User</button>
+</form> -->
+<!--  
+<h2>{{userDeatils}}</h2> -->
+
+<!-- <app-form/> -->
+<!-- <router-outlet/>  -->
+
+<!--! Data PAssing Parent to Child -->
+<!-- <h1>Parent Component</h1>
+<app-user [user]="userName" city="Delh"/>
+
+<select #selectedUser (change)="onUserCh(selectedUser.value)" name="" id="">
+  <option value="a">A</option>
+  <option value="b">B</option>
+  <option value="c">C</option>
+</select> -->
+
+<!-- <div class="grid-wrapper">
+@for (user of users; track user.id) {
+    <app-user [user]="user.name" [isActive]="user.isActive" />
+    <app-user  [user]="user" />
+  }
+</div> -->
+<!-- <app-user (getArr)="handleArr($event)"/>
+@for(a of arr;track a){
+  <li>a</li> -->
+<!-- }
+   -->
+
+<!--! Pipes -->
+<!-- 
+<h1>{{ title | uppercase }}</h1>
+<h1>{{ title | lowercase }}</h1>
+<h1>{{ title | titlecase }}</h1>
+<h1>{{date | date}}</h1>
+<h1>{{date | date:'fullDate'}}</h1>
+<h1>{{date | date:'hh:mm:ss'}}</h1>
+
+<h1>{{20 | currency:'INR'}}</h1>
+
+<h1>{{date | date:'fullDate' | uppercase}}</h1> -->
+
+<!--! Custome Pipes -->
+<!-- <h2>{{amount |currencyConvert}}</h2>
+<h2>{{amount |currencyConvert:12}}</h2> -->
+<!-- 
+<h1>{{count}}</h1>
+<button (click)="updateCount()"></button>
+<div *ngIf="count!==5">
+  <app-user [counter]="count" #user />
+</div> -->
+
+
+@for(item of productList;track item.id){
+  <ul>
+    <li>{{item.title}}</li>
+  </ul>
+}
+

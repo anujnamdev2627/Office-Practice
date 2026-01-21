@@ -1,0 +1,62 @@
+<h1>Welcome to Form Component</h1>
+<div class="wrapper">
+  <form [formGroup]="formData">
+    <div class="field">
+      <label for="name">Name</label>
+      <input
+        formControlName="name"
+        type="text"
+        name=""
+        id="name"
+        placeholder="Enter Your Name"
+      />
+    </div>
+    <div class="field">
+      <label for="surname">Surname</label>
+      <input
+        formControlName="surname"
+        type="text"
+        name=""
+        id="surname"
+        placeholder="Enter Your surname"
+      />
+    </div>
+    <div class="field">
+      <label for="email">Email</label>
+      <input
+        formControlName="email"
+        type="email"
+        name=""
+        id="email"
+        placeholder="Enter Your email"
+      />
+    </div>
+    <div class="field">
+      <label for="pass">password</label>
+      <input
+        formControlName="password"
+        type="password"
+        name=""
+        id="pass"
+        placeholder="Enter Your password"
+      />
+    </div>
+  </form>
+  <div class="decleartionForm">
+    <p>Please check this box if above details are correct</p>
+    <input
+      type="checkbox"
+      id="declare"
+      [formControl]="declareCheckBox"
+      (change)="handleCheckBox()"
+    />
+  </div>
+
+  @if (furteherDetails) {
+    <a
+      [routerLink]="['/further', { data: formData.value }]"
+      routerLinkActive="router-link-active"
+      >Move Further</a
+    >
+  }
+</div>

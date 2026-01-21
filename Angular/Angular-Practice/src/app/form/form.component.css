@@ -1,0 +1,82 @@
+h1{
+    text-align: center;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100vw;
+    height: 100vh;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100vw;
+}
+.field{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ width: 400px;
+}
+input {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  width: 260px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+input:focus {
+  border-color: #007bff;
+}
+button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #007bff;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+button:hover {
+  background: #0056b3;
+}
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+label{
+    text-align: center;
+    color: #007bff;
+    font-size: larger;
+}
+
+.decleartionForm{
+  display: flex;
+  text-align: center;
+  border: 1px solid;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+

@@ -1,1 +1,16 @@
-<p>{{ name }} works! Id:{{ id }}</p>
+<!-- <div>
+  <h1>User Component</h1>
+  <p>Hello {{ user.name }}</p>
+<div
+  [ngStyle]="{
+    height: user.isActive ? '10px' : '5px',
+    width: user.isActive ? '10px' : '5px',
+    backgroundColor: user.isActive ? 'green' : 'red'
+  }"
+></div>
+</div>
+<button (click)="handleData()"> Send Data</button> -->
+  <h1>User Component</h1>
+  <h2>{{counter}}</h2>
+  <input type="text" #val (input)="onchange(val.value)" name="" id="">
+  <h3>{{input}}</h3>
