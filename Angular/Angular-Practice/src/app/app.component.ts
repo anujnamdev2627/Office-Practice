@@ -9,10 +9,13 @@ import {
 } from '@angular/core';
 
 import {
+  FormBuilder,
   FormControl,
   FormGroup,
+  FormArray,
   FormsModule,
   NgForm,
+  NgModel,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
@@ -27,6 +30,7 @@ import { FormComponent } from './form/form.component';
 import { UserComponent } from './user/user.component';
 import { CurrencyConvertPipe } from './pipe/currency-convert.pipe';
 import { ProductService } from './services/product.service';
+import { PostsService } from './services/posts.service';
 interface user {
   name: string;
   title: string;
@@ -49,7 +53,6 @@ interface taskFormate {
     UserComponent,
     ProfileComponent,
     CounterComponent,
-    ReactiveFormsModule,
     NgIf,
     NgFor,
     FormsModule,
@@ -262,13 +265,47 @@ export class AppComponent {
   //   updateCount(){
   //     this.count++;
   //   }
-   productList:any;
-  constructor(private productService: ProductService) {}
-  ngOnInit(){
-    this.productService.getProductList().subscribe((data:any)=>{
-      this.productList=data.products;
-      console.log(this.productList);
-      console.log(Object.keys(this.productList[0]));
-    })
-  }
+  // productList: any;
+  // constructor(
+  //   private productService: ProductService,
+  //   private postService: PostsService,
+  // ) {}
+  // // data:any;
+  // // ngOnInit() {
+  // //   // this.productService.getProductList().subscribe((data:any)=>{
+  // //   //   this.productList=data.products;
+  // //   //   console.log(this.productList);
+  // //   //   console.log(Object.keys(this.productList[0]));
+  // //   // })
+  // //   this.postService.getPosts().subscribe((data: any) => {
+  // //     console.log(data); 
+  // //     this.data=data;
+  // //   });
+  // // }
+ 
+ //!Form Builder Classes
+  
+ constructor(private fb:FormBuilder){}
+
+//  registrationForm=this.fb.group({
+//    userName:[''],
+//    password:[''],
+   
+//  })
+
+
+form = new FormGroup({
+  name: new FormControl(),
+  email: new FormControl(),
+  alternateEmails: new FormArray([]),
+});
+
+get alternateEmails(): FormArray {
+  return this.form.get('alternateEmails') as FormArray;
+}
+
+addEmail() {
+  this.alternateEmails.push(new FormControl(''));
+}
+  
 }

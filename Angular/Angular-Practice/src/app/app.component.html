@@ -260,10 +260,48 @@
   <app-user [counter]="count" #user />
 </div> -->
 
-
-@for(item of productList;track item.id){
+<!-- 
+<app-form/>
+@for(item of data;track item.id){
   <ul>
-    <li>{{item.title}}</li>
+    <li>{{item.name}}</li>
   </ul>
-}
+} -->
 
+<!-- <h1>Lazy Loading Example</h1>
+
+<a [routerLink]="['/admin']" routerLinkActive="router-link-active" >Go to Admin</a>
+<router-outlet/>  -->
+<!-- 
+<h1>Build And Deployed
+</h1> -->
+<!-- <form action="" #user="ngForm">
+  <input
+    type="text"
+    name="name"
+    placeholder="Enter Your name"
+    #name="ngModel"
+    ngModel
+    required
+    [class.is-invalid]="name.invalid && name.touched"
+  />
+</form> -->
+
+<form [formGroup]="form">
+
+  <input type="text" formControlName="name">
+  <input type="email" formControlName="email">
+
+  <button type="button" (click)="addEmail()">
+    Add alternate email
+  </button>
+
+  <div formArrayName="alternateEmails">
+    @for (email of alternateEmails.controls; track $index; let i = $index) {
+      <input type="text" [formControlName]="i">
+    }
+  </div>
+
+</form>
+
+{{ form.value | json }}

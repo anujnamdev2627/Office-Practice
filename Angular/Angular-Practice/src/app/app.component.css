@@ -136,3 +136,6 @@ li button:last-of-type:hover {
   align-items: center;
   justify-content: center;
 }
+.is-invalid{
+  border-color: red;
+}

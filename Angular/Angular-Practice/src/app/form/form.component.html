@@ -1,4 +1,4 @@
-<h1>Welcome to Form Component</h1>
+<!-- <h1>Welcome to Form Component</h1>
 <div class="wrapper">
   <form [formGroup]="formData">
     <div class="field">
@@ -41,8 +41,8 @@
         placeholder="Enter Your password"
       />
     </div>
-  </form>
-  <div class="decleartionForm">
+  </form> -->
+<!-- <div class="decleartionForm">
     <p>Please check this box if above details are correct</p>
     <input
       type="checkbox"
@@ -50,13 +50,48 @@
       [formControl]="declareCheckBox"
       (change)="handleCheckBox()"
     />
-  </div>
+  </div> -->
 
-  @if (furteherDetails) {
+<!-- @if (furteherDetails) {
     <a
       [routerLink]="['/further', { data: formData.value }]"
       routerLinkActive="router-link-active"
       >Move Further</a
     >
-  }
-</div>
+  } -->
+<!-- </div> -->
+
+<!--! New Form For api test -->
+<form action="" [formGroup]="formData" style="margin-bottom: 20px">
+  <div class="field">
+    <label for="name">Name</label>
+    <input
+      formControlName="name"
+      type="text"
+      name=""
+      id="name"
+      placeholder="Enter Your Name"
+    />
+  </div>
+  <div class="field">
+    <label for="email">Email</label>
+    <input
+      formControlName="email"
+      type="email"
+      name=""
+      id="email"
+      placeholder="Enter Your email"
+    />
+  </div>
+  <div class="field">
+    <label for="age">Age</label>
+    <input
+      formControlName="age"
+      type="number"
+      name=""
+      id="age"
+      placeholder="Enter Your Age"
+    />
+  </div>
+  <button (click)="submit()">Add</button>
+</form>
