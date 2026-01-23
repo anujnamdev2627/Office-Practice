@@ -1,0 +1,107 @@
+<div class="wrapper">
+  <h1>User Details Form</h1>
+
+  <form [formGroup]="userForm">
+    <!-- ================= User Info ================= -->
+    <div class="form-ele">
+      <label for="userName">Name</label>
+      <input
+        id="userName"
+        type="text"
+        formControlName="userName"
+        placeholder="Enter name"
+      />
+    </div>
+
+    <div class="form-ele">
+      <label for="surName">Surname</label>
+      <input
+        id="surName"
+        type="text"
+        formControlName="surName"
+        placeholder="Enter surname"
+      />
+    </div>
+
+    <div class="form-ele">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        type="email"
+        formControlName="email"
+        placeholder="Enter email"
+      />
+      <!-- !Additional emails -->
+      <div style="display: flex; width: 100%;gap: 10px;align-items: center;">
+        <button
+        type="button"
+        (click)="addEmail()"
+        [disabled]="maxEmail"
+        [class.btn-disabled]="maxEmail"
+      >
+        Add Alternate Email
+      </button>
+      <span [class.temp]="!maxEmail" style="text-align: center;">Maximum 2 additional Emails allowed</span>
+      </div>
+      <div style="margin-top: 1.25rem" formArrayName="additionalEmail">
+        @for (email of additionalEmail.controls; track $index; let i = $index) {
+          <div class="form-ele">
+            <input type="text" [formControlName]="i" />
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- ================= Address ================= -->
+    <fieldset formGroupName="address">
+      <legend>Address</legend>
+
+      <div class="form-ele">
+        <label for="houseNo">House No</label>
+        <input id="houseNo" type="text" formControlName="houseNo" />
+      </div>
+
+      <div class="form-ele">
+        <label for="street1">Street</label>
+        <input id="street1" type="text" formControlName="street1" />
+      </div>
+
+      <!-- Additional Address (FormArray placeholder) -->
+      <div class="form-ele">
+        <!-- addAddress FormArray will be rendered here -->
+      </div>
+
+      <div class="form-ele">
+        <label for="district">District</label>
+        <input id="district" type="text" formControlName="district" />
+      </div>
+
+      <div class="form-ele">
+        <label for="state">State</label>
+        <input id="state" type="text" formControlName="state" />
+      </div>
+    </fieldset>
+
+    <!-- ================= Education ================= -->
+    <fieldset formGroupName="education">
+      <legend>Education</legend>
+
+      <div class="form-ele">
+        <label for="degree">Degree</label>
+        <input id="degree" type="text" formControlName="degree" />
+      </div>
+
+      <div class="form-ele">
+        <label for="organization">Organization</label>
+        <input id="organization" type="text" formControlName="organization" />
+      </div>
+
+      <div class="form-ele">
+        <label for="grade">Grade</label>
+        <input id="grade" type="text" formControlName="grade" />
+      </div>
+    </fieldset>
+  </form>
+</div>
+
+<pre>{{ userForm.value | json }}</pre>
