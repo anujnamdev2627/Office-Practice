@@ -1,0 +1,56 @@
+import { AbstractControl, ValidationErrors } from '@angular/forms';
+
+export function strongPasswordValidator(
+  control: AbstractControl
+): ValidationErrors | null {
+
+  const value = control.value || '';
+
+  const errors: ValidationErrors = {};
+
+  if (!/[a-z]/.test(value)) {
+    errors['lowercase'] = true;
+  }
+
+  if (!/[A-Z]/.test(value)) {
+    errors['uppercase'] = true;
+  }
+
+  if (!/\d/.test(value)) {
+    errors['number'] = true;
+  }
+
+  if (!/[@$!%*?&]/.test(value)) {
+    errors['special'] = true;
+  }
+
+  if (value.length < 8) {
+    errors['minLength'] = true;
+  }
+
+  return Object.keys(errors).length ? errors : null;
+}
+
+<small class="error" *ngIf="password?.errors?.['required']">
+  Password is required
+</small>
+
+<small class="error" *ngIf="password?.errors?.['lowercase']">
+  Must contain at least one lowercase letter
+</small>
+
+<small class="error" *ngIf="password?.errors?.['uppercase']">
+  Must contain at least one uppercase letter
+</small>
+
+<small class="error" *ngIf="password?.errors?.['number']">
+  Must contain at least one number
+</small>
+
+<small class="error" *ngIf="password?.errors?.['special']">
+  Must contain at least one special character
+</small>
+
+<small class="error" *ngIf="password?.errors?.['minLength']">
+  Must be at least 8 characters long
+</small>

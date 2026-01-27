@@ -1,0 +1,105 @@
+/* Container for the login page */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f5f5f5; /* light gray background */
+  font-family: Arial, sans-serif;
+}
+
+/* Wrapper for the form */
+.wrapper {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Form heading */
+.wrapper h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #333333;
+}
+
+/* Each form element */
+.form-ele {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+  gap: 5px;
+}
+
+.form-ele label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.35rem;
+}
+
+.form-ele input {
+  padding: 0.6rem 0.75rem;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.form-ele input:focus {
+  outline: none;
+  border-color: #3f51b5; /* matches Angular Material primary */
+  box-shadow: 0 0 5px rgba(63, 81, 181, 0.3);
+}
+
+/* Login button */
+button {
+  margin-top: 0.5rem;
+  align-self: flex-start;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #2563eb;
+  color: #ffffff;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Signup link */
+.wrapper p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666666;
+}
+
+.wrapper p a {
+  color: #3f51b5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.wrapper p a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: #dc2626; /* red color for errors */
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}

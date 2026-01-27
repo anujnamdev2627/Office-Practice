@@ -1,0 +1,68 @@
+<div class="login-container">
+  <div class="wrapper">
+    <form [formGroup]="SignUpform" (ngSubmit)="onSubmit()">
+      <h2>Sign Up</h2>
+
+      <!-- Email -->
+      <div class="form-ele">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          formControlName="email"
+          placeholder="Enter email"
+        />
+      </div>
+
+      <!-- Username -->
+      <div class="form-ele">
+        <label for="username">Username</label>
+        <input
+          id="username"
+          type="text"
+          formControlName="username"
+          placeholder="Enter username"
+        />
+      </div>
+
+      <!-- Password -->
+      <div class="form-ele">
+        <label for="password">Password</label>
+        <input
+          id="password"
+          type="password"
+          formControlName="password"
+          placeholder="Enter password"
+        />
+      </div>
+      @if(SignUpform.get('password')?.invalid &&(SignUpform.get('password')?.touched||SignUpform.get('password')?.dirty)){
+        
+      }
+
+      <!-- Confirm Password -->
+      <div class="form-ele">
+        <label for="confirmPassword">Confirm Password</label>
+        <input
+          id="confirmPassword"
+          type="password"
+          formControlName="confirmPassword"
+          placeholder="Confirm password"
+        />
+      </div>
+
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="SignUpform.invalid"
+      >
+        Sign Up
+      </button>
+
+      <p>
+        Already have an account?
+        <a routerLink="/login">Login</a>
+      </p>
+    </form>
+  </div>
+</div>
