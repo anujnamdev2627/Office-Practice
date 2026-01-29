@@ -1,0 +1,281 @@
+<div class="wrapper">
+  <h1>User Details Form</h1>
+
+  <form [formGroup]="userForm">
+    <!-- ================= User Info ================= -->
+    <fieldset>
+      <legend>User Info</legend>
+      <!-- <div class="form-ele">
+        <label for="userName">Name</label>
+        <input
+          id="userName"
+          type="text"
+          formControlName="userName"
+          placeholder="Enter name"
+        />
+      </div> -->
+      <app-cs-input
+        id="userName"
+        type="text"
+        formControlName="userName"
+        placeholder="Enter name"
+        label="Name"
+      />
+      <!-- <div class="form-ele">
+        <label for="surName">Surname</label>
+        <input
+          id="surName"
+          type="text"
+          formControlName="surName"
+          placeholder="Enter surname"
+        />
+      </div> -->
+      <app-cs-input
+        id="surName"
+        type="text"
+        formControlName="surName"
+        placeholder="Enter surname"
+        label="Surname"
+      />
+      <div class="form-ele">
+        <app-cs-input
+          id="email"
+          type="email"
+          formControlName="email"
+          placeholder="Enter email"
+          label="Email"
+        />
+        <!-- !Additional emails -->
+        <div
+          style="
+            display: flex;
+            width: 100%;
+            gap: 10px;
+            align-items: center;
+            margin-top: 18px;
+          "
+        >
+          <button
+            type="button"
+            (click)="addEmail()"
+            [disabled]="maxEmail"
+            [class.btn-disabled]="maxEmail"
+          >
+            Add Alternate Email
+          </button>
+          <span [class.temp]="!maxEmail" style="text-align: center; color: red"
+            >Maximum 2 additional Emails allowed</span
+          >
+        </div>
+        <div style="margin-top: 1.25rem" formArrayName="additionalEmail">
+          @for (
+            email of additionalEmail.controls;
+            track $index;
+            let i = $index
+          ) {
+            <div
+              style="
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+              "
+            >
+             <div style="width: 80%;">
+               <app-cs-input
+                id="email"
+                type="email"
+                [formControlName]="i"
+                placeholder="Enter Alternate email"
+              />
+             </div>
+              <button
+                style="margin-top: 0; align-self: center"
+                (click)="removeEmail(i)"
+              >
+                X
+              </button>
+            </div>
+          }
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- ================= Address ================= -->
+    @if (userInfoValid) {
+      <fieldset formGroupName="address">
+        <legend>Address</legend>
+
+        <!-- <div class="form-ele">
+          <label for="houseNo">House No</label>
+          <input id="houseNo" type="text" formControlName="houseNo" />
+        </div> -->
+        <app-cs-input
+          id="houseNo"
+          type="text"
+          formControlName="houseNo"
+          label="HouseNo"
+        />
+
+        <!-- <div class="form-ele">
+          <label for="street1">Street</label>
+          <input id="street1" type="text" formControlName="street1" />
+        </div> -->
+        <app-cs-input
+          id="street1"
+          type="text"
+          formControlName="street1"
+          label="Street"
+        />
+
+        <div style="display: flex; width: 100%; gap: 10px; align-items: center">
+          <button
+            type="button"
+            (click)="addAddress()"
+            [disabled]="maxAdd"
+            [class.btn-disabled]="maxAdd"
+            matTooltip="Click to submit the form"
+            mat-raised-button
+            matTooltipPosition="above"
+          >
+            Add Address
+          </button>
+          <span [class.temp]="!maxAdd" style="text-align: center; color: red"
+            >Maximum 2 additional allowed</span
+          >
+        </div>
+
+        <!-- Additional Address (FormArray placeholder) -->
+        <div
+          class="form-ele"
+          style="margin-top: 1.25rem"
+          formArrayName="addAddress"
+        >
+          @for (add of address.controls; track $index; let i = $index) {
+            <div
+              style="
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+              "
+            >
+              <!-- <input
+                type="text"
+                [formControlName]="i"
+                placeholder="Additional Address"
+                style="width: 80%"
+              /> -->
+              <div style="width: 80%">
+                <app-cs-input
+                  type="text"
+                  [formControlName]="i"
+                  placeholder="Additional Address"
+                />
+              </div>
+              <button
+                style="height: 100%; margin-top: 0; align-self: center"
+                (click)="removeAddress(i)"
+              >
+                X
+              </button>
+            </div>
+          }
+        </div>
+
+        <!-- <div class="form-ele">
+        <label for="state">State</label>
+      <select name="" id="">
+        @for(op of states$ ;track op){
+          <option value="">{{op.name}}</option>
+        }
+      </select>
+      </div> -->
+        <div class="form-ele">
+          <label for="state">State</label>
+
+          <select id="state" formControlName="state">
+            <option value="">Select State</option>
+            @for (op of states$ | async; track op.iso2) {
+              <option [value]="op.iso2">
+                {{ op.name }}
+              </option>
+            }
+          </select>
+        </div>
+        <div class="form-ele">
+          <label for="city">City</label>
+          <select formControlName="city">
+            <option value="">Select City</option>
+            @for (city of cities$ | async; track city.id) {
+              <option [value]="city.id">{{ city.name }}</option>
+            }
+          </select>
+        </div>
+      </fieldset>
+    }
+
+    <!-- ================= Education ================= -->
+    @if (userInfoValid && addressValid) {
+      <fieldset formGroupName="education">
+        <legend>Education</legend>
+
+        <!-- <div class="form-ele">
+          <label for="degree">Degree</label>
+          <input id="degree" type="text" formControlName="degree" />
+        </div> -->
+        <app-cs-input
+          id="degree"
+          type="text"
+          formControlName="degree"
+          label="Degree"
+        />
+
+        <!-- <div class="form-ele">
+          <label for="organization">Organization</label>
+          <input id="organization" type="text" formControlName="organization" />
+        </div> -->
+        <app-cs-input
+          id="organization"
+          type="text"
+          formControlName="organization"
+          label="Organization"
+        />
+
+        <!-- <div class="form-ele">
+          <label for="grade">Grade</label>
+          <input id="grade" type="text" formControlName="grade" />
+        </div> -->
+        <app-cs-input
+          id="grade"
+          type="text"
+          formControlName="grade"
+          label="Grade"
+        />
+
+        <button type="button" (click)="addEducation()">Add Education</button>
+        <div formArrayName="addEducation" style="margin-top: 1.2rem">
+          @for (edForm of education.controls; track $index; let i = $index) {
+            <div [formGroupName]="i" class="form-ele internal-education">
+              <!-- <input formControlName="degree" placeholder="Degree" /> -->
+              <app-cs-input formControlName="degree" placeholder="Degree" />
+              <!-- <input
+                formControlName="organization"
+                placeholder="Organization"
+              /> -->
+              <app-cs-input
+                formControlName="organization"
+                placeholder="Organization"
+              />
+              <!-- <input formControlName="grade" placeholder="Grade" /> -->
+              <app-cs-input formControlName="grade" placeholder="Grade" />
+
+              <button type="button" (click)="removeEducation(i)">Remove</button>
+            </div>
+          }
+        </div>
+      </fieldset>
+    }
+  </form>
+  <pre>{{ userForm.value | json }}</pre>
+</div>
+{{1}}

@@ -2,7 +2,7 @@
   <div class="wrapper">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <h2>Login</h2>
-      <div class="form-ele">
+      <!-- <div class="form-ele">
         <label for="userName">Username</label>
         <input
           id="userName"
@@ -13,8 +13,8 @@
         @if (userName?.invalid && (userName?.dirty || userName?.touched)) {
           <span class="error">Enter Valid UserName</span>
         }
-      </div>
-      <div class="form-ele">
+      </div> -->
+      <!-- <div class="form-ele">
         <label for="password">Password</label>
         <input
           id="password"
@@ -25,6 +25,33 @@
         @if (passWord?.invalid && (passWord?.dirty || passWord?.touched)) {
           <span class="error">Enter Valid Password </span>
         }
+      </div> -->
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <div  style="display: flex; flex-direction: column;">
+          <app-cs-input
+            label="Username"
+            id="username"
+            type="text"
+            placeholder="Enter Username"
+            formControlName="userName"
+          />
+          @if (userName?.invalid && (userName?.dirty || userName?.touched)) {
+            <span class="error">Enter Valid UserName</span>
+          }
+        </div>
+        <div style="display: flex; flex-direction: column">
+          <app-cs-input
+            label="Password"
+            id="password"
+            type="password"
+            placeholder="Enter Password"
+            formControlName="password"
+          />
+
+          @if (passWord?.invalid && (passWord?.dirty || passWord?.touched)) {
+            <span class="error">Enter Valid Password</span>
+          }
+        </div>
       </div>
       @if (wrong) {
         <span class="error">Either Username Or Password Is Wrong</span>

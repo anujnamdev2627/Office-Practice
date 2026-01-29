@@ -1,0 +1,30 @@
+.form-ele {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.3rem;
+}
+
+.form-ele label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.35rem;
+}
+
+.form-ele input {
+  padding: 0.6rem 0.75rem;
+  font-size: 0.95rem;
+  border-radius: 6px;
+
+  border: 1px solid #d1d5db;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* ================= Focus States ================= */
+.form-ele input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}

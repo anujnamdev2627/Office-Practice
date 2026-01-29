@@ -4,7 +4,7 @@
       <h2>Sign Up</h2>
 
       <!-- Email -->
-      <div class="form-ele">
+      <!-- <div class="form-ele">
         <label for="email">Email</label>
         <input
           id="email"
@@ -12,10 +12,19 @@
           formControlName="email"
           placeholder="Enter email"
         />
-      </div>
-
+      </div> -->
+      <app-cs-input
+        label="Email"
+        type="email"
+        id="email"
+        formControlName="email"
+        placeholder="Enter Email"
+      />
+      @if (email?.errors?.["required"] && (email?.dirty || email?.touched)) {
+        <small>Email is required</small>
+      }
       <!-- Username -->
-      <div class="form-ele">
+      <!-- <div class="form-ele">
         <label for="username">Username</label>
         <input
           id="username"
@@ -23,33 +32,43 @@
           formControlName="username"
           placeholder="Enter username"
         />
-      </div>
+      </div> -->
 
+      <app-cs-input
+        label="Username"
+        id="username"
+        type="text"
+        placeholder="Enter Username"
+        formControlName="username"
+      />
+      <!-- @if (userName?.invalid && (userName?.dirty || userName?.touched)) {
+          <span class="error">Enter Valid UserName</span>
+        } -->
       <!-- Password -->
-      <div class="form-ele">
-        <label for="password">Password</label>
-        <input
-          id="password"
-          type="password"
-          formControlName="password"
-          placeholder="Enter password"
-        />
-      </div>
-      @if(SignUpform.get('password')?.invalid &&(SignUpform.get('password')?.touched||SignUpform.get('password')?.dirty)){
-        
-      }
+      <app-cs-input
+        label="Password"
+        id="password"
+        type="password"
+        placeholder="Enter Password"
+        formControlName="password"
+      />
+      @if (
+        SignUpform.get("password")?.invalid &&
+        (SignUpform.get("password")?.touched ||
+          SignUpform.get("password")?.dirty)
+      ) {}
 
       <!-- Confirm Password -->
-      <div class="form-ele">
-        <label for="confirmPassword">Confirm Password</label>
-        <input
-          id="confirmPassword"
-          type="password"
-          formControlName="confirmPassword"
-          placeholder="Confirm password"
-        />
-      </div>
-
+      <app-cs-input
+        label="ConfirmPassword"
+        id="confirmPassword"
+        type="password"
+        placeholder="Enter Password"
+        formControlName="confirmPassword"
+      />
+      @if (SignUpform.errors?.["passwordMismatch"] && confirmPassword?.touched) {
+        <small>Passwords do not match</small>
+      }
       <button
         mat-raised-button
         color="primary"
