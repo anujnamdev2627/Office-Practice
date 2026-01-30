@@ -1,7 +1,7 @@
 <div class="wrapper">
   <h1>User Details Form</h1>
 
-  <form [formGroup]="userForm">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm)"> 
     <!-- ================= User Info ================= -->
     <fieldset>
       <legend>User Info</legend>
@@ -275,7 +275,10 @@
         </div>
       </fieldset>
     }
+
+    <button [disabled]="userForm.invalid">Submit</button>
   </form>
+
   <pre>{{ userForm.value | json }}</pre>
 </div>
 {{1}}

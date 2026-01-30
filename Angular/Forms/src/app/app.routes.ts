@@ -11,12 +11,26 @@ export const routes: Routes = [
     component: AuthorisedComponent,
     canActivate: [authGuard],
     children: [
-      { path: 'userform', component: UserformComponent },
-      { path: 'dashboard', component: DashboardComponent },
+      // { path: 'userform', component: UserformComponent },
+      // { path: 'dashboard', component: DashboardComponent },
+      {
+        path: 'userform',
+        loadComponent: () =>
+          import('./userform/userform.component').then(
+            (c) => c.UserformComponent,
+          ),
+      },
+      { 
+        path: 'dashboard',
+        loadComponent: () =>
+          import('./dashboard/dashboard.component').then(
+            (c) => c.DashboardComponent,
+          ),
+      },
     ],
   },
 
-  { path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent, canActivate: [] },
   { path: 'signup', component: SignupComponent },
 
   { path: '**', redirectTo: 'login' },

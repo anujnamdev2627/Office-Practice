@@ -1,0 +1,6 @@
+  <div class="todo-input">
+    <input #todoInput placeholder="Add new todo..." />
+    <button (click)="add.emit(todoInput.value); todoInput.value=''">
+      Add
+    </button>
+  </div>

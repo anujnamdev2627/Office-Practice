@@ -1,0 +1,10 @@
+//!Mixin
+@mixin flexprob {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+//!Mixin with variable
+@mixin letter($c1: 2px) {
+  letter-spacing: $c1;
+}

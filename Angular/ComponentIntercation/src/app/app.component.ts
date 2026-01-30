@@ -101,28 +101,42 @@ export class AppComponent {
   //   })
   // }
 
-  nolists$ = from([11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
-  rollNolIst$ = of([1, 2, 3, 4, 5, 6, 6, 7, 8, 8, 0]);
-  constructor() {
-    // this.nolists$.subscribe((res:number)=>{
-    //   console.log(res);
-    // })
-    //   this.nolists$
-    //     .pipe(filter((num) => num % 2 == 0))
-    //     .subscribe((res) => console.log(res));
-    //
-    // this.rollNolIst$
-    //   .pipe(map((val) => val.filter((m) => m % 2 == 0)))
-    //   .subscribe((v) => {
-    //     console.log(v);
-    //   });
+//   nolists$ = from([11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
+//   rollNolIst$ = of([1, 2, 3, 4, 5, 6, 6, 7, 8, 8, 0]);
+//   constructor() {
+//     // this.nolists$.subscribe((res:number)=>{
+//     //   console.log(res);
+//     // })
+//     //   this.nolists$
+//     //     .pipe(filter((num) => num % 2 == 0))
+//     //     .subscribe((res) => console.log(res));
+//     //
+//     // this.rollNolIst$
+//     //   .pipe(map((val) => val.filter((m) => m % 2 == 0)))
+//     //   .subscribe((v) => {
+//     //     console.log(v);
+//     //   });
 
     
-  }
- product=inject(ProductsService)
+//   }
+//  product=inject(ProductsService)
 
-  onRoleChange(event:any){
-   this.product.role$.next(event.target.value)
-   this.product.roelsub$.next(event.target.value)
-  }
+//   onRoleChange(event:any){
+//    this.product.role$.next(event.target.value)
+//    this.product.roelsub$.next(event.target.value)
+//   }
+input=''
+
+ngOnInit(){
+ console.log("Oninit");
+ 
+}
+ngOnChange(){
+  console.log("OnChange");
+  
+}
+ngDoCheck(){
+  console.log("DoCheck");
+  
+}
 }

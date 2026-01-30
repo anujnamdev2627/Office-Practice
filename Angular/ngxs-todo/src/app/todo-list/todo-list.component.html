@@ -1,0 +1,25 @@
+<div class="todo-container">
+  <h1>My Todo App</h1>
+
+  <!-- <div class="todo-input">
+    <input #todoInput placeholder="Add new todo..." />
+    <button (click)="addTodo(todoInput.value); todoInput.value=''">
+      Add
+    </button>
+  </div> -->
+  <app-input (add)="addTodo($event)" />
+
+  @if (todos().length === 0) {
+    <p class="empty-msg">No todos yet</p>
+  }
+
+  <ul>
+    @for (todo of todos(); track todo.id) {
+      <app-todo-item
+        [todo]="todo"
+        (toggle)="toggleTodo($event)"
+        (delete)="deleteTodo($event)"
+      />
+    }
+  </ul>
+</div>

@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// header{
+//     width: 100vw;
+//     height: 100vh;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//     place-items: center;
+//     background-color: aquamarine;
+// }
+
+// //!Operators
+// h1{
+//     color: red;
+//     font-size: 20px+50px;
+// }
+
+// //!Variables
+// $bg-clor: lightblue;
+// p{
+//     background-color: $bg-clor;
+// }
+
+//!Nesting
+// header {
+//   width: 100vw;
+//   height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   place-items: center;
+//   background-color: aquamarine;
+
+//   h1 {
+//     color: red;
+//     font-size: 70px;
+//   }
+//   h1:hover {
+//     color: blue;
+//     transition: color 0.5s ease-in-out;
+//   }
+//   // p:hover{
+//   //     color: green;
+//   //        transition: color 0.5s ease-in-out;
+//   // }
+//   p {
+//     background-color: lightblue;
+//     font-size: 30px;
+//     &:hover {
+//       color: green;
+//       transition: color 0.5s ease-in-out;
+//     }
+//   }
+// }
+
+// //!Mixin
+// @mixin flexprob {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+// //!Mixin with variable
+// @mixin letter($c1: 2px) {
+//   letter-spacing: $c1;
+// }
+
+@import 'partials';
+header {
+  width: 100vw;
+  height: 100vh;
+  @include flexprob;
+  flex-direction: column;
+  place-items: center;
+  background-color: aquamarine;
+
+  h1 {
+    @include letter(50px);
+    color: red;
+    font-size: 70px;
+  }
+  h1:hover {
+    color: blue;
+    transition: color 0.5s ease-in-out;
+  }
+  // p:hover{
+  //     color: green;
+  //        transition: color 0.5s ease-in-out;
+  // }
+  p {
+    background-color: lightblue;
+    font-size: 30px;
+    &:hover {
+      color: green;
+      transition: color 0.5s ease-in-out;
+    }
+  }
+}

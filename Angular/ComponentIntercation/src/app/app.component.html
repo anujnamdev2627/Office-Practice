@@ -17,7 +17,7 @@
 <!-- <app-dragable/> -->
 
 <!-- ! Todo-->
-<app-rxjs-basics />
+<!-- <app-rxjs-basics /> -->
 <!-- <span>
     <input type="text" name="" id="" #element>
     <button (click)="addTask(element)" >Add</button>
@@ -30,9 +30,13 @@
     }
     </ul> -->
 
-<select name="" id="" (change)="onRoleChange($event)">
+<!-- <select name="" id="" (change)="onRoleChange($event)">
   <option value="Guest">Guest</option>
   <option value="Admin">Admin</option>
   <option value="SAdmin">Super Admin</option>
 </select>
-<app-child/>
+<app-child/> -->
+<input type="text" [(ngModel)]="input" name="" id="">
+<br><br>
+<h1>Input Comes Here:{{input}}</h1>
+<app-dragable [Input]="input"/>

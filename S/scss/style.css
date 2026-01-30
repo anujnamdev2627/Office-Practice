@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  place-items: center;
+  background-color: aquamarine;
+}
+header h1 {
+  letter-spacing: 50px;
+  color: red;
+  font-size: 70px;
+}
+header h1:hover {
+  color: blue;
+  transition: color 0.5s ease-in-out;
+}
+header p {
+  background-color: lightblue;
+  font-size: 30px;
+}
+header p:hover {
+  color: green;
+  transition: color 0.5s ease-in-out;
+}/*# sourceMappingURL=style.css.map */
